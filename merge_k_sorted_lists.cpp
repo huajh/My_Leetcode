@@ -2,6 +2,7 @@
 #include<algorithm>
 #include<vector>
 #include<limits.h>
+#include<queue>
 using namespace std;
 
 //Definition for singly-linked list.
@@ -15,8 +16,7 @@ class Solution {
 private: 
 	ListNode* merge(ListNode* a, ListNode* b) // a, b are sorted
 	{	
-		ListNode nhead(0);
-		ListNode* head = &nhead;
+		ListNode* head = new ListNode(0);
 		ListNode* tail = head;
 
 		while (a != NULL || b != NULL)
@@ -48,8 +48,39 @@ private:
 		return head->next;
 
 	}
+	struct compare
+	{
+		bool operator() (const ListNode* l1, const ListNode* l2)
+		{
+			return l1->val > l2->val;
+		}
+	};
 public:
+
+	// using priority queue
 	ListNode* mergeKLists(vector<ListNode*>& lists)  // 
+	{
+		priority_queue<ListNode*, vector<ListNode*>, compare> que;
+		for (auto i : lists)
+		{
+			if (i) que.push(i);			
+		}		
+		ListNode* head = new ListNode(0);
+		ListNode* tail = head;
+		while (!que.empty())
+		{
+			tail->next = que.top();
+			que.pop();
+			tail = tail->next;
+			if (tail->next)
+				que.push(tail->next);
+		}
+		return head->next;
+	}
+
+
+	// merge sort
+	ListNode* mergeKLists2(vector<ListNode*>& lists)  // 
 	{
 		if (lists.empty())
 		{
@@ -62,13 +93,14 @@ public:
 		{
 			return merge(lists[0],lists[1]);			
 		}
-		int mid = k / 2;
+		int mid = k / 2;		
 		vector<ListNode*> left(lists.begin(),lists.begin() + mid );
 		vector<ListNode*> right(lists.begin() + mid , lists.end());
 		ListNode* a = mergeKLists(left);	
 		ListNode* b = mergeKLists(right);
 		return merge(a, b);		
 	}
+
 };
 
 void main()
