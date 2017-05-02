@@ -13,14 +13,14 @@ struct ListNode {
 };
 
 class Solution {
-private: 
+private:
 	ListNode* merge(ListNode* a, ListNode* b) // a, b are sorted
-	{	
+	{
 		ListNode* head = new ListNode(0);
 		ListNode* tail = head;
 
 		while (a != NULL || b != NULL)
-		{			
+		{
 			if (a == NULL)
 			{
 				tail->next = b;
@@ -33,17 +33,17 @@ private:
 			}
 			else{
 				if (a->val < b->val)
-				{	
-					tail->next = a;					
+				{
+					tail->next = a;
 					tail = tail->next;
-					a = a->next;				
+					a = a->next;
 				}
 				else{
 					tail->next = b;
 					tail = tail->next;
-					b = b->next;					
+					b = b->next;
 				}
-			}			
+			}
 		}
 		return head->next;
 
@@ -58,13 +58,13 @@ private:
 public:
 
 	// using priority queue
-	ListNode* mergeKLists(vector<ListNode*>& lists)  // 
+	ListNode* mergeKLists(vector<ListNode*>& lists)  //
 	{
 		priority_queue<ListNode*, vector<ListNode*>, compare> que;
 		for (auto i : lists)
 		{
-			if (i) que.push(i);			
-		}		
+			if (i) que.push(i);
+		}
 		ListNode* head = new ListNode(0);
 		ListNode* tail = head;
 		while (!que.empty())
@@ -80,25 +80,25 @@ public:
 
 
 	// merge sort
-	ListNode* mergeKLists2(vector<ListNode*>& lists)  // 
+	ListNode* mergeKLists2(vector<ListNode*>& lists)  //
 	{
 		if (lists.empty())
 		{
 			return NULL;
 		}
-		int k = lists.size();		
+		int k = lists.size();
 		if (k == 1)
 			return lists[0];
 		if (k == 2)
 		{
-			return merge(lists[0],lists[1]);			
+			return merge(lists[0],lists[1]);
 		}
-		int mid = k / 2;		
+		int mid = k / 2;
 		vector<ListNode*> left(lists.begin(),lists.begin() + mid );
 		vector<ListNode*> right(lists.begin() + mid , lists.end());
-		ListNode* a = mergeKLists(left);	
+		ListNode* a = mergeKLists(left);
 		ListNode* b = mergeKLists(right);
-		return merge(a, b);		
+		return merge(a, b);
 	}
 
 };
@@ -107,7 +107,7 @@ void main()
 {
 	Solution sol;
 	ListNode * head  =	NULL;
-	
+
 	ListNode * head2;
 	ListNode a2(-1), b2(5), c2(11);
 	head2 = &a2;
@@ -124,8 +124,7 @@ void main()
 	lists.push_back(head);
 	lists.push_back(head2);
 	lists.push_back(head0);
-	lists.push_back(head3);
+	lists.push_back(head3);  
 
-	ListNode* ans = sol.mergeKLists(lists);  // 
+	ListNode* ans = sol.mergeKLists(lists);  //
 }
-

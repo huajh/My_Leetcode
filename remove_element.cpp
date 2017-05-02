@@ -21,11 +21,13 @@ public:
 	}
 };
 
-void main()
+int main()
 {
 	vector<int> nums = { 1, 3, 4, 2, 1, 1 };
-	int val = 1;
+	int val = 1;    
 	Solution sol;
 	int ans = sol.removeElement(nums, val);
 	cout << ans << endl;
+    return 0;
+
 }

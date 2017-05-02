@@ -94,7 +94,7 @@ public:
 	}
 };
 
-void main()
+int main()
 {
 	int nums[8] = {3,4,5,2,1,1,8,9};
 	int ans = maximumGap(nums, 8);
@@ -102,4 +102,6 @@ void main()
 	vector<int> vec = { 3, 4, 5, 2, 1, 1, 8, 9 };
 	int ans2 = sol.maximumGap(vec);
 	cout << ans2 << " " << ans2 << endl;
+
+    return 0;
 } 

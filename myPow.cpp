@@ -1,6 +1,7 @@
 #include<iostream>
 #include<algorithm>
 #include<vector>
+#include<math.h>
 #include<limits.h>
 using namespace std;
 
@@ -20,7 +21,7 @@ public:
 	}
 };
 
-void main()
+int  main()
 {
 	Solution sol;
 	double x = 1.323;
@@ -29,4 +30,8 @@ void main()
 	double ans0 = pow(x, n);
 	double ans = sol.myPow(x, n);
 	cout << ans0 << "\t"<<ans << endl;
+    vector<int> vec;    
+
+
+    return 0;     
 }

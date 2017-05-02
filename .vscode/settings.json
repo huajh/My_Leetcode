@@ -1,0 +1,29 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "files.associations": {
+        "limits": "cpp",
+        "iostream": "cpp",
+        "initializer_list": "cpp"
+    }
+
+    //"files.defaultLanguage": "g++",
+    // "clang.cflags": [],
+    // "clang.executable": "clang",
+    // "clang.diagnostic.enable": true,
+    // "clang.completion.enable": true,
+    // "files.associations": {
+    //     "algorithm": "cpp",
+    //     "vector": "cpp",
+    //     "iostream": "cpp",
+    //     "limits": "cpp",
+    //     "initializer_list": "cpp"
+    // },
+    // "ycmd.python": "python",
+    // "ycmd.enabled_languages": [ "cpp", "c" ],
+    // "ycmd.confirm_extra_conf": true,
+    // "ycmd.use_imprecise_get_type": true,
+    // "ycmd.debug": true
+    // "files.associations": {
+    //     "limits": "cpp"
+    // }
+}

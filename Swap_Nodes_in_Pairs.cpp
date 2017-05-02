@@ -40,8 +40,7 @@ public:
 		return head;
 	}
 };
-
-void main()
+int  main()
 {
 	Solution sol;
 	ListNode node1(1), node2(2), node3(3), node4(4),node5(5);
@@ -51,5 +50,7 @@ void main()
 	node4.next = &node5;
 	ListNode* head = & node1;
 	sol.swapPairs(head);
+
+    return 0;
 
 }

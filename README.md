@@ -1,6 +1,13 @@
-# My_Leetcode
-Leetcode Training
+# C/C++ programming training
 
-This is a collection of my solutions of the problems provided by Leetcode for personal C/C++ training.
+## problem sets
 
-https://leetcode.com/problemset/algorithms/
+* Leetcode. https://leetcode.com/problemset/algorithms/
+* Programming test for intership of company, such as Alibaba, Baidu, Tencent.
+
+
+
+## 
+
+huajh7@gmail.com
+
