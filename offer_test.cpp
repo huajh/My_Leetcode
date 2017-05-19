@@ -24,9 +24,9 @@ public:
 int main()
 {
 
-    A a = 10;
-    A b = a;
-    b.Print();
+ 
+    int a = 15;
+    int b = a>>1;
     
     return 0;
 }

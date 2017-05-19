@@ -47,11 +47,12 @@ public:
 };
 
 
-void main()
+int main()
 {
 	Solution sol;
 	vector<int> nums = { 3, 2, 4 };
 	int target = 6;
 	vector<int> ans = sol.twoSum(nums, target);
 
+    return 0;
 }

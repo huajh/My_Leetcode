@@ -67,11 +67,12 @@ public:
 	};
 };
 
-void main()
+int main()
 {
 	Solution sol;
 	int res = sol.nthUglyNumber(1000);
 	cout << res << endl;
 	std::vector<int> v;
 
+    return 0;
 }
