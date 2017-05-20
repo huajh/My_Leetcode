@@ -32,6 +32,5 @@ int  main()
 	cout << ans0 << "\t"<<ans << endl;
     vector<int> vec;    
 
-
     return 0;     
 }

@@ -3,10 +3,17 @@
     "files.associations": {
         "limits": "cpp",
         "iostream": "cpp",
-        "initializer_list": "cpp"
+        "initializer_list": "cpp",
+        "vector": "cpp",
+        "__bit_reference": "cpp",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "iterator": "cpp",
+        "string": "cpp",
+        "__tree": "cpp",
+        "map": "cpp",
+        "ios": "cpp"
     }
-
-
     //"files.defaultLanguage": "g++",
     // "clang.cflags": [],
     // "clang.executable": "clang",
